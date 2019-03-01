@@ -23,6 +23,11 @@ int readSudoku(int (*grid)[9], FILE *);
 
 int main(int argc, char *argv[])
 {
+	if(argc < 2)
+	{
+		printf("Please give validSudoku.txt or invalidSudoku.txt as the argument.\nUsage: ./a.out <validSudoku.txt> \n");
+		return 1;
+	}
 	int grid[9][9];
 	FILE *fp = fopen(argv[1], "r");
 
